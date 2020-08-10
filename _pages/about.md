@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-Tributary Data is what it's about. 
+This is my data sandbox. Thanks for coming to play with me. 
+
+
