@@ -15,7 +15,7 @@ I've started to pull out and organize some of Kingston's information to see how 
 The documentation at https://www.realtor.com/research/data/ says that the data is updated at the beginning of the month with the previous months data. So this should be an accurate snapshot of what has happened through July. 
 
 
-<img src="{{https://github.com/oroconnor/td}}/images/kingstondata_1.jpg" style="display: block; margin: auto;">
+<img src="{{https://github.com/oroconnor/td}}/images/kingstondata_1.jpg">
 
 
 
