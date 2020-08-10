@@ -1,42 +1,29 @@
 ---
 layout: post
-title:  Code snippets in a blog post
-categories: [HTML,Code]
+title:  Reproduceable code for "Kingston Home Sales Trends"
+categories: []
 ---
 
-This post demonstrate the use of code snippets in the theme. The code snippets are powered by [Pygments](http://pygments.org/) and the code theme that is been used in Reverie is called [Draula](https://draculatheme.com/).
+Again the data for the visualizations in "Kingston Home Sales Trends" are from Realtor.com 
+They request that this link be provided with attribution: https://www.realtor.com/research/data/
 
-This is a raw snippet:
+Here's the reproduceable code that takes the realtor.com dataset and creates the visualizations used in the post:
 
-```
-hello world
-123
-This is a text snippet
-```
 
-This is a PHP snippet:
-
-```php
-<?php
-    echo 'Hello, World!';
-?>
-```
-
-This is a JavaScript snippet:
-
-```js
-const add = (a, b) => a + b
-const minus = (a, b) => a - b
-
-console.log(add(100,200))  // 300
-console.log(minus(100,200))  // -100
-```
-
-This is a Python snippet:
 
 ```python
-def say_hello():
-    print("hello world!")
+import pandas as pd
+from datetime import datetime as dt
+import matplotlib.pyplot as plt
 
-say_hello()   // "hello world!"
+#read the realtor.com data into a pandas dataframe
+df = pd.read_csv("/Users/owenoconnor/Documents/scripts/realtor/RDC_Inventory_Hotness_Metrics_Zip_History.csv")
+
+#convert the string dates into datetime objects, and then setting that column as the index for the dataframe.
+df["date_dt"]  = pd.to_datetime(df["month_date_yyyymm"], format = "%Y%m", errors = "coerce") 
+df.index = df["date_dt"]
+
+kingston = df[df["postal_code"] == 12401]
+kingston_subset = kingston[['hotness_score','median_days_on_market','median_listing_price']]
+kingston_subset["month"]=kingston_subset.index.month #adds a month column that we can use to sort by
 ```
