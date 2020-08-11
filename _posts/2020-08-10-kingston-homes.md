@@ -18,6 +18,12 @@ The documentation at https://www.realtor.com/research/data/ says that the data i
 <img src="https://oroconnor.github.io/td/images/kingstondata_1.jpg">
 
 
+Looking at the four years of information on the Median Listing Price for Kingston, we can see that this year's July the Median Listing Price is up from last year, but also not high in comparison with 2018. We're only looking at July for reasons we will explore in a minute.
+
+The Median Days on the Market shows a decline, so houses are moving faster this July than in previous Julys. Now, we don't have longterm data to look at here, so we're only seeing the past four years. But that's really what's most relevant to the question we are asking... what kind of effect the post-pandemic wave of interest is having on Kingston in comparison to what home sales were like pre-pandemic. Certainly homes are on the market for less time this July, but let's add a little context. 
+
+<img src="https://oroconnor.github.io/td/images/kingstondata_2.jpg">
+
 
 
 
