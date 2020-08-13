@@ -36,7 +36,7 @@ I will post an update in early September when we get August's data. In the meant
 
 
 
-You can check out the python code that organized the data and created the charts [here.] (https://oroconnor.github.io/td/kingston-homes-code/)
+You can check out the python code that organized the data and created the charts [here.](https://oroconnor.github.io/td/kingston-homes-code/)
 
 
 
