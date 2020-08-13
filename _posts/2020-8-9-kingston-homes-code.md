@@ -7,7 +7,7 @@ categories: []
 Again the data for the visualizations in "Kingston Home Sales Trends" are from Realtor.com 
 They request that this link be provided with attribution: https://www.realtor.com/research/data/
 
-Here's the full code that takes the realtor.com dataset and creates the visualizations used in the post:
+Here's the python code that takes the realtor.com dataset and creates the visualizations used in the post:
 
 
 
