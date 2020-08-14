@@ -11,7 +11,7 @@ You'll hear anecdotes from people looking for a first home of having their offer
 
 \[August 13th update: For examples of the sorts of anecdotes I'm talking about, check out this article that came out a few days after I put this post up... [www.bloomberg.com article](https://www.bloomberg.com/news/articles/2020-08-12/catskills-town-leads-u-s-in-rising-home-prices-with-nyc-exodus)\]
 
-Realtor.com is kind enough to make their real estate transactions data available at [https://www.realtor.com/research/data/](https://www.realtor.com/research/data/)
+Realtor.com is kind enough to make their real estate transactions data available at [https://www.realtor.com/research/data/](https://www.realtor.com/research/data/) , under their "market hotness index."
 I've started to pull out and organize some of Kingston's information to see how this year's trends are comparing to previous years'.
 
 The documentation at https://www.realtor.com/research/data/ says that the data is updated at the beginning of the month with the previous months data. So this should be an accurate snapshot of what has happened through July. 
