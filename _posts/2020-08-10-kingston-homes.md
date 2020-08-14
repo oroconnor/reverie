@@ -43,8 +43,8 @@ You can check out the python code that organized the data and created the charts
 
 
 \[August 13th update: Just one quick comment on the Bloomberg article linked to above....
-The article compares a 2019 quarter to the same 2020 quarter, and highlights the 18% increase to a $276,000 median listing price. I just want to add a little more context so we can how this fits in with the rest of the data for the past four years. Here's a chart of the monthly Median Listing Price for 2017-2020. I marked dotted lines to show where $276,000 is on the chart, as well as $233,896 (which would be the amount before an 18% increase). 
-No doubt, the Median Listing Price has seen a significant increase since the start of 2017. It's illuminating, though, to see that Kingston is not so far off from summer of 2018.
+The article compares 2019 second quarter to the same 2020 quarter, and highlights the 18% increase to $276,000 for a "typical selling price". I just want to add a little more context so we can how this fits in with the rest of the data for the past four years. Here's a chart of the monthly Median Listing Price for 2017-2020. I marked dotted lines to show where $276,000 is on the chart, as well as $233,896 (which would be the amount before an 18% increase). Now, this is a little bit apples to oranges, because Bloomberg is talking about selling prices, and this data is for Median Listing Price. 
+No doubt, the Median Listing Price has seen a significant increase since the start of 2017. It's illuminating, though, to see that Kingston is not so far off from summer of 2018. 
 <img src="https://oroconnor.github.io/td/images/kingstondata_4.jpg">
 \]
 
