@@ -76,7 +76,7 @@ plt.suptitle("Days on the Market - Jan-Jul of Past Four Years")
 plt.figtext(0,-.05, "Data source: https://www.realtor.com/research/data/")
 fig.savefig("kingstondata_2.jpg", bbox_inches = "tight")
 ```
-Third and final plot:
+Third plot:
 
 ```python
 #now plotting the Median Days on Market for all the months of the year
@@ -96,4 +96,19 @@ ax.set_ylabel("Months")
 plt.suptitle("Days on the Market - Past Four Years")
 plt.figtext(0,-.05, "Data source: https://www.realtor.com/research/data/")
 fig.savefig("kingstondata_3.jpg", bbox_inches = "tight")
+```
+\[August 13th update: And now the final plot that I added after the Bloomberg article...
+
+```python
+fig, ax = plt.subplots()
+ax.plot(kingston_subset.index,kingston_subset['median_listing_price'])
+ax.axhline(y = 276000, color = "g", linestyle = "--", label = "$276,000")
+ax.axhline(y = 233896, color = "r", linestyle = "--", label = "$233,986")
+ax.set_ylabel('Median Listing Price')
+ax.set_xlabel("Year and Month")
+ax.legend()
+plt.suptitle("Median Listing Price - Past Four Years")
+plt.figtext(0,-.05, "Data source: https://www.realtor.com/research/data/")
+fig.autofmt_xdate()
+fig.savefig("kingstondata_4.jpg", bbox_inches = "tight")
 ```
