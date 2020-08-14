@@ -97,7 +97,7 @@ plt.suptitle("Days on the Market - Past Four Years")
 plt.figtext(0,-.05, "Data source: https://www.realtor.com/research/data/")
 fig.savefig("kingstondata_3.jpg", bbox_inches = "tight")
 ```
-\[August 13th update: And now the final plot that I added after the Bloomberg article...
+\[August 13th update: And now the final plot that I added after the Bloomberg article...\]
 
 ```python
 fig, ax = plt.subplots()
