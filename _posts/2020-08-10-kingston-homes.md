@@ -28,7 +28,7 @@ The Median Days on the Market shows a decline, so houses are moving faster this 
 
 Looking at how the Median Days On The Market changes over the year for the past four years (January through July) shows that this metric experiences a seasonal effect. Home sales slow in the winter months and speed up in the Spring and Summer. This year, 2020, we can see an uncharacteristic slow down in the Spring. One can guess that this abnormal spike in the median days on the market was because of the disruption of the pandemic and the shut-down. By July, the median days on the market has shortened and come back in line with the general trend of the summer from previous years, and in fact has overshot some and and is lower than previous Julys. 
 
-Now, the question is whether the Median Days On The Market is just normalizing and the rest of the year will be similar to previous years, or whether this speed up of the market will intensify or hang on unusually far into the fall and winter. 
+Now, the question is whether the Median Days On The Market is just returning to its usual pattern and the rest of the year will be similar to previous years, or whether this speed up of the market will intensify or hang on unusually far into the fall and winter. 
 Here's the chart with the rest of months filled in. August's data and beyond will show us whether the market falls back in line with the recent seasonal patterns, or continues with an period of abnormally quick home sales. 
 
 <img src="https://oroconnor.github.io/td/images/kingstondata_3.jpg">
