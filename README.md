@@ -6,6 +6,7 @@
   <a href="https://ko-fi.com/Y8Y2QC9Y"><img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" width="200"/></a>
   </p>
 </h1>
+(From Owen: This repository is for my static website. Below is the readme for the theme. Much of the code in this repository is from the theme. Of course, posts and other content are created by me, as well as other little tweaks I make to the website.)
 
 Reverie is a [Jekyll](https://jekyllrb.com/)-powered theme which is simple and opinionated. It's actually a fork of [jekyll-now](https://github.com/barryclark/jekyll-now) with some additional features and personal touches which I've implemented to suit my needs for my blog.
 
