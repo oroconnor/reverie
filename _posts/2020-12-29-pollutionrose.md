@@ -52,13 +52,36 @@ pollutionrose(dataframename, pollutant = "actualpollutantcolumnname" wd = "actua
 
 What are we seeing when we look at a pollutionrose chart? By default, you'll see a key on the right of the chart. This shows the different ranges that the function is using to bin the pollutant measurements, as well as a label for the choosen pollutant. 
 In the rose itself, there are wedges that represent the different wind directions for that site. By default, it will use windrose()'s deafult of 30degs for each wedge. 
-In concentric circles going out from the rose's center are marks noting the percentage of the pollutant readings that were taken when the wind direction fell within the angles of one of those wedges. To simplify things for a moment, we can change the "breaks = " parameter to not break the pollutant readings into different bins. This shows us the pollution rose which is essentially just a windrose. It only shows the percentage of the time for the dataframe where there was a reading for this pollutant and the wind was coming from the direction of that specific wedge. But because we have lumped all the pollutant readings into one bin, it tells us no more details about how differnt wind directions were contributing to pollutant levels. 
+In concentric circles going out from the rose's center are marks noting the percentage of the pollutant readings that were taken when the wind direction fell within the angles of one of those wedges. To simplify things for a moment, we can change the "breaks = " parameter to not break the pollutant readings into different bins. This shows us the pollution rose which is essentially just a windrose with no windspeed information. It only shows the percentage of the time for the dataframe where there was a reading for this pollutant and the wind was coming from the direction of that specific wedge. But because we have lumped all the pollutant readings into one bin, it tells us no more details about how different wind directions were contributing to pollutant levels. 
+If you add up the percentages of all the wedges, you get 100%. 
 
 [pollution rose image]
 
 Now, if we add our default bins back in, we can see that each wedge is then broken up into the colors of the different pollutant bins. The colors on each wedge show the proportion of readings from that wind direction that fall in particular bins. The color closest to the center represents the lowest concentration readings, and the color furthest out on the rose represents the bin with the highest pollutant concentration. 
+In summary, the pollution rose provides us with information on: 1) what percentage of the time the wind is coming from different wind directions and 2) what proportion of each wind direction has readings of each bin of pollution measurements. 
+
+## Arguments 
+
+Lets go through the arguments that pollutionrose() takes. Shown are the defaults. As we said, you'll need to specify your dataframe and probably your pollutant. The rest would be used only if you want to change the defaults. 
+
+***dataframe*** The first argument is your dataset, which should be in the form of a dataframe. This is inputted as just the name of the dataframe, as shown in the above examples. 
+
+***pollutant*** 'pollutant = "nox"' Pollutant specifys which series in your dataframe to use as the pollutant for the pollution rose. 
+***key*** 'key = TRUE' You can switch this to false if you don't want the key. 
+***key.footer*** 'key.footer = pollutant' Default is that the label at the bottom of the key is the name of the footer. 
+***key.position*** 'key.positoin = "right"' You could change this if you hated the key being on the right. 
+***breaks*** 'breaks = 6' This specifies the number of bins that the pollutant is broken into. Adjust if you want more or less bins.
+***paddle*** 'paddle = FALSE' When paddle is set to FALSE, it makes the pollution rose with wedge shapes like we've shown in the pollutionrose() examples. The paddle = TRUE gives you the shape used as the default in the windrose() example above. 
+***seg*** 'seg = 0.9' This specifies the width of the wedge in relation to the size of the angle. The size of each wedge is seg * angle, so you can adjust the seg parameter to give you more or less space between wedges. 
+***normalise*** 'normalise = FALSE' If this is changed to TRUE, then each wedge is adjusted so that the percentages shown on the rings add up to one. 
+
+pollutionrose() is a wrapper that uses windrose() function. So here are a few windrose() arguments that might be helpful in adjusting your pollutionrose() plot (This is a selected list. For the full list of arguments, consult the documentation(2)):
+***angle***
+
+
 
 
 
 
 (1)Carslaw, D. C. and K. Ropkins, (2012) openair --- an R package for air quality data analysis. Environmental Modelling & Software. Volume 27-28, 52-61.
+(2)https://davidcarslaw.github.io/openair/reference/windRose.html#references
