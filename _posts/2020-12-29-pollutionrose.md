@@ -26,6 +26,9 @@ windrose() needs two properly identified columns in your data in order to functi
 windrose(dataframename, ws = "actualwindsppedcolumnname", wd = "actualwinddirectioncolumnname")
 ```
 
+windrose() displays "Frequency of Counts by Wind Direction." In this case, the "counts" are of windspeed measurements that fall into different bins of windspeed ranges. pollutionrose() also creates a visualization showing "Frequency of Counts by Wind Direction." However, with pollutionrose(), the "counts" are measurements of a certain pollutant, again seperated into bins. 
+
+The chart shows how different wind directions contribute to the counts of this particular pollutant, as broken down into ranges. 
 
 
 
