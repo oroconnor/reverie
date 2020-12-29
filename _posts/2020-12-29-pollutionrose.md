@@ -67,12 +67,19 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 ***dataframe*** The first argument is your dataset, which should be in the form of a dataframe. This is inputted as just the name of the dataframe, as shown in the above examples. 
 
 ***pollutant*** 'pollutant = "nox"' Pollutant specifys which series in your dataframe to use as the pollutant for the pollution rose. 
+
 ***key*** 'key = TRUE' You can switch this to false if you don't want the key. 
+
 ***key.footer*** 'key.footer = pollutant' Default is that the label at the bottom of the key is the name of the footer. 
+
 ***key.position*** 'key.positoin = "right"' You could change this if you hated the key being on the right. 
+
 ***breaks*** 'breaks = 6' This specifies the number of bins that the pollutant is broken into. Adjust if you want more or less bins.
+
 ***paddle*** 'paddle = FALSE' When paddle is set to FALSE, it makes the pollution rose with wedge shapes like we've shown in the pollutionrose() examples. The paddle = TRUE gives you the shape used as the default in the windrose() example above. 
+
 ***seg*** 'seg = 0.9' This specifies the width of the wedge in relation to the size of the angle. The size of each wedge is seg * angle, so you can adjust the seg parameter to give you more or less space between wedges. 
+
 ***normalise*** 'normalise = FALSE' If this is changed to TRUE, then each wedge is adjusted so that the percentages shown on the rings add up to one. 
 
 pollutionrose() is a wrapper that uses windrose() function. So here are a few windrose() arguments that might be helpful in adjusting your pollutionrose() plot (This is a selected list. For the full list of arguments, consult the documentation(2)):
