@@ -91,8 +91,21 @@ pollutionrose() is a wrapper that uses windrose() function. So here are a few wi
 ***statistic*** 'statistic = "prop.count"' The default for statistic is "prop.count", which sizes the bins of the wedges based on their proportion of the measurements. By changing to statistic = "prop.mean", you can instead see the wedge bins sized based on their contribution to the mean. If for some reason you wanted the wedges to show actually counts of the measurements in each bin, then statistic = "abs.count" would provide that. 
 
 
+[Examples]
 
 
+
+## References and Resources 
+
+Here are a few links to the package author's websites and documentation. My hope was to provide a beginners introduction to using and interpretting the pollutionrose() function of the openair package. Additional examples and uses can be found in these resources, as well as any official updates:
+
+
+[windrose() and pollutionrose() documentation](https://davidcarslaw.github.io/openair/reference/windRose.html#details)
+[Original paper introducing the openair package](https://www.researchgate.net/publication/235961430_openair_---_An_R_package_for_air_quality_data_analysis)
+[openair manual](http://www.dca.iag.usp.br/material/ritaynoue/PAE/aula_R/apostilas/OpenAir_Manual.pdf)
+[openair book](https://bookdown.org/david_carslaw/openair/)
+[openair repository](https://github.com/davidcarslaw/openair)
+[pollutionrose() code](https://github.com/davidcarslaw/openair/blob/master/R/windRose.R)
 
 
 (1)Carslaw, D. C. and K. Ropkins, (2012) openair --- an R package for air quality data analysis. Environmental Modelling & Software. Volume 27-28, 52-61.
