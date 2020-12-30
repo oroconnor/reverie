@@ -82,6 +82,8 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 
 ***normalise*** 'normalise = FALSE' If this is changed to TRUE, then each wedge is adjusted so that the percentages shown on the rings add up to one. 
 
+
+## windrose() arguments
 pollutionrose() is a wrapper that uses windrose() function. So here are a few windrose() arguments that might be helpful in adjusting your pollutionrose() plot (This is a selected list. For the full list of arguments, consult the documentation(2)):
 
 ***angle*** 'angle = 30' This is what divides the whole rose into wedge angles. So if you want a different number of wedges (and thus having each wedge capture more or less wind angles), you can adjust this angle. Ideally, have it be a factor of 360. 
@@ -94,6 +96,12 @@ pollutionrose() is a wrapper that uses windrose() function. So here are a few wi
 [Examples]
 
 
+## Lattice:xyplot arguments
+windrose() can pass arguments on to lattice:xyplot, cutData and drawOpenKey functions. lattice:xyplot is what used to create the pollution rose visualization. One thing that you might want to tweak that involves passing an argument on to lattice:xyplot is to set a title or subtitle for the chart. 
+
+***main*** 'main = "Example Title"' You can use "main =" to set a title for your pollution rose chart. 
+
+***sub*** 'sub = "Example Subtitle"' You can use "sub =" to set a subtitle for your pollution rose chart. 
 
 ## References and Resources 
 
@@ -101,11 +109,17 @@ Here are a few links to the package author's websites and documentation. My hope
 
 
 [windrose() and pollutionrose() documentation](https://davidcarslaw.github.io/openair/reference/windRose.html#details)
+
 [Original paper introducing the openair package](https://www.researchgate.net/publication/235961430_openair_---_An_R_package_for_air_quality_data_analysis)
+
 [openair manual](http://www.dca.iag.usp.br/material/ritaynoue/PAE/aula_R/apostilas/OpenAir_Manual.pdf)
+
 [openair book](https://bookdown.org/david_carslaw/openair/)
+
 [openair repository](https://github.com/davidcarslaw/openair)
+
 [pollutionrose() code](https://github.com/davidcarslaw/openair/blob/master/R/windRose.R)
+
 
 
 (1)Carslaw, D. C. and K. Ropkins, (2012) openair --- an R package for air quality data analysis. Environmental Modelling & Software. Volume 27-28, 52-61.
