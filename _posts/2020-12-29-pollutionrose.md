@@ -83,7 +83,12 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 ***normalise*** 'normalise = FALSE' If this is changed to TRUE, then each wedge is adjusted so that the percentages shown on the rings add up to one. 
 
 pollutionrose() is a wrapper that uses windrose() function. So here are a few windrose() arguments that might be helpful in adjusting your pollutionrose() plot (This is a selected list. For the full list of arguments, consult the documentation(2)):
-***angle***
+
+***angle*** 'angle = 30' This is what divides the whole rose into wedge angles. So if you want a different number of wedges (and thus having each wedge capture more or less wind angles), you can adjust this angle. Ideally, have it be a factor of 360. 
+
+***type*** 'type = "default"' The default provides a single plot like we've seen in our examples. Alternative settings will divide plots by different groupings. Options include: year, hour, month, season, weekday, monthyear
+
+***statistic*** 'statistic = "prop.count"' The default for statistic is "prop.count", which sizes the bins of the wedges based on their proportion of the measurements. By changing to statistic = "prop.mean", you can instead see the wedge bins sized based on their contribution to the mean. If for some reason you wanted the wedges to show actually counts of the measurements in each bin, then statistic = "abs.count" would provide that. 
 
 
 
