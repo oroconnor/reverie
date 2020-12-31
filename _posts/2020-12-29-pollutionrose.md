@@ -28,7 +28,7 @@ windrose() needs two properly identified columns in your data in order to functi
 windrose(dataframename, ws = "actualwindspeedcolumnname", wd = "actualwinddirectioncolumnname")
 ```
 
-windrose() displays "Frequency of Counts by Wind Direction." In this case, the "counts" are of windspeed measurements that fall into different bins of windspeed ranges. pollutionrose() also creates a visualization showing "Frequency of Counts by Wind Direction." However, with pollutionrose(), the "counts" are measurements of a certain pollutant, again seperated into bins. 
+windrose() displays "Frequency of Counts by Wind Direction." In this case, the "counts" are of windspeed measurements that fall into different bins of windspeed ranges. pollutionrose() also creates a visualization showing "Frequency of Counts by Wind Direction." However, with pollutionrose(), the "counts" are measurements of a certain pollutant, again separated into bins. 
 
 The pollutionrose chart shows how different wind directions contribute to the counts of this particular pollutant, as broken down into ranges. 
 
@@ -42,7 +42,7 @@ The other parameter that pollutionrose() needs is the name of the pollutant colu
 ```r
 pollutionrose(dataframename)
 ```
-More often than not, you will need to clarify either the wind direction column name or the pollutant, so in practice the simplist use of pollutionrose() looks like this:
+More often than not, you will need to clarify either the wind direction column name or the pollutant, so in practice the simplest use of pollutionrose() looks like this:
 
 ```r
 pollutionrose(dataframename, pollutant = "actualpollutantcolumnname" wd = "actualwinddirectioncolumnname")
@@ -50,8 +50,8 @@ pollutionrose(dataframename, pollutant = "actualpollutantcolumnname" wd = "actua
 
 ## Interpretation
 
-What are we seeing when we look at a pollutionrose chart? By default, you'll see a key on the right of the chart. This shows the different ranges that the function is using to bin the pollutant measurements, as well as a label for the choosen pollutant. 
-In the rose itself, there are wedges that represent the different wind directions for that site. By default, it will use windrose()'s deafult of 30degs for each wedge. 
+What are we seeing when we look at a pollutionrose chart? By default, you'll see a key on the right of the chart. This shows the different ranges that the function is using to bin the pollutant measurements, as well as a label for the chosen pollutant. 
+In the rose itself, there are wedges that represent the different wind directions for that site. By default, it will use windrose()'s default of 30 degrees for each wedge. 
 In concentric circles going out from the rose's center are marks noting the percentage of the pollutant readings that were taken when the wind direction fell within the angles of one of those wedges. To simplify things for a moment, we can change the "breaks = " parameter to not break the pollutant readings into different bins. This shows us the pollution rose which is essentially just a windrose with no windspeed information. It only shows the percentage of the time for the dataframe where there was a reading for this pollutant and the wind was coming from the direction of that specific wedge. But because we have lumped all the pollutant readings into one bin, it tells us no more details about how different wind directions were contributing to pollutant levels. 
 If you add up the percentages of all the wedges, you get 100%. 
 
@@ -66,13 +66,13 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 
 ***dataframe*** The first argument is your dataset, which should be in the form of a dataframe. This is inputted as just the name of the dataframe, as shown in the above examples. 
 
-***pollutant*** 'pollutant = "nox"' Pollutant specifys which series in your dataframe to use as the pollutant for the pollution rose. 
+***pollutant*** 'pollutant = "nox"' Pollutant specifies which series in your dataframe to use as the pollutant for the pollution rose. 
 
 ***key*** 'key = TRUE' You can switch this to false if you don't want the key. 
 
 ***key.footer*** 'key.footer = pollutant' Default is that the label at the bottom of the key is the name of the footer. 
 
-***key.position*** 'key.positoin = "right"' You could change this if you hated the key being on the right. 
+***key.position*** 'key.position = "right"' You could change this if you hated the key being on the right. 
 
 ***breaks*** 'breaks = 6' This specifies the number of bins that the pollutant is broken into. Adjust if you want more or less bins.
 
@@ -105,7 +105,7 @@ windrose() can pass arguments on to lattice:xyplot, cutData and drawOpenKey func
 
 ## References and Resources 
 
-Here are a few links to the package author's websites and documentation. My hope was to provide a beginners introduction to using and interpretting the pollutionrose() function of the openair package. Additional examples and uses can be found in these resources, as well as any official updates:
+Here are a few links to the package author's websites and documentation. My hope was to provide a beginners introduction to using and interpreting the pollutionrose() function of the openair package. Additional examples and uses can be found in these resources, as well as any official updates:
 
 
 [windrose() and pollutionrose() documentation](https://davidcarslaw.github.io/openair/reference/windRose.html#details)
