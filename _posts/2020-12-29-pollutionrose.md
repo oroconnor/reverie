@@ -7,7 +7,7 @@ categories: [R]
 
 The **openair** R package, by Carslaw and Ropkins, provides a simple way to create a pollution rose from air quality and weather data (1). We're going to look at what this function of the package can do, and the mechanics of how to best take advantage of it. 
 
-[pollution rose image]
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/ExampleJuly4PollutionRoseDec10.pdf">
 
 ## openair
 
