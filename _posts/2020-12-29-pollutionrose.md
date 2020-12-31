@@ -56,7 +56,7 @@ In the rose itself, there are wedges that represent the different wind direction
 In concentric circles going out from the rose's center are marks noting the percentage of the pollutant readings that were taken when the wind direction fell within the angles of one of those wedges. To simplify things for a moment, we can change the "breaks = " parameter to not break the pollutant readings into different bins. This shows us the pollution rose which is essentially just a windrose with no windspeed information. It only shows the percentage of the time for the dataframe where there was a reading for this pollutant and the wind was coming from the direction of that specific wedge. But because we have lumped all the pollutant readings into one bin, it tells us no more details about how different wind directions were contributing to pollutant levels. 
 If you add up the percentages of all the wedges, you get 100%. 
 
-[pollution rose image]
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/breaks.png" alt = "pollution rose with no breaks">
 
 Now, if we add our default bins back in, we can see that each wedge is then broken up into the colors of the different pollutant bins. The colors on each wedge show the proportion of readings from that wind direction that fall in particular bins. The color closest to the center represents the lowest concentration readings, and the color furthest out on the rose represents the bin with the highest pollutant concentration. 
 In summary, the pollution rose provides us with information on: 1) what percentage of the time the wind is coming from different wind directions and 2) what proportion of each wind direction has readings of each bin of pollution measurements. 
@@ -78,6 +78,7 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 ***breaks*** 'breaks = 6' This specifies the number of bins that the pollutant is broken into. Adjust if you want more or less bins.
 
 ***paddle*** 'paddle = FALSE' When paddle is set to FALSE, it makes the pollution rose with wedge shapes like we've shown in the pollutionrose() examples. The paddle = TRUE gives you the shape used as the default in the windrose() example above. 
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/paddle.png" alt = "pollution rose with paddle style">
 
 ***seg*** 'seg = 0.9' This specifies the width of the wedge in relation to the size of the angle. The size of each wedge is seg * angle, so you can adjust the seg parameter to give you more or less space between wedges. 
 
@@ -88,19 +89,21 @@ Lets go through the arguments that pollutionrose() takes. Shown are the defaults
 pollutionrose() is a wrapper that uses windrose() function. So here are a few windrose() arguments that might be helpful in adjusting your pollutionrose() plot (This is a selected list. For the full list of arguments, consult the documentation(2)):
 
 ***angle*** 'angle = 30' This is what divides the whole rose into wedge angles. So if you want a different number of wedges (and thus having each wedge capture more or less wind angles), you can adjust this angle. Ideally, have it be a factor of 360. 
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/angle.png" alt = "pollution rose with angle set to 45">
 
 ***type*** 'type = "default"' The default provides a single plot like we've seen in our examples. Alternative settings will divide plots by different groupings. Options include: year, hour, month, season, weekday, monthyear
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/season.png" alt = "pollution rose with type set to season">
 
 ***statistic*** 'statistic = "prop.count"' The default for statistic is "prop.count", which sizes the bins of the wedges based on their proportion of the measurements. By changing to statistic = "prop.mean", you can instead see the wedge bins sized based on their contribution to the mean. If for some reason you wanted the wedges to show actually counts of the measurements in each bin, then statistic = "abs.count" would provide that. 
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/mean.png" alt = "pollution rose with statistic set to prop.mean">
 
-
-[Examples]
 
 
 ## Lattice:xyplot arguments
 windrose() can pass arguments on to lattice:xyplot, cutData and drawOpenKey functions. lattice:xyplot is what used to create the pollution rose visualization. One thing that you might want to tweak that involves passing an argument on to lattice:xyplot is to set a title or subtitle for the chart. 
 
 ***main*** 'main = "Example Title"' You can use "main =" to set a title for your pollution rose chart. 
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/title.png" alt = "Example pollution rose with title">
 
 ***sub*** 'sub = "Example Subtitle"' You can use "sub =" to set a subtitle for your pollution rose chart. There is a default subtitle based on the statistic chosen. That's what says "Frequency of counts by wind direction (%)" in our examples. So you'll be overriding that.  
 
