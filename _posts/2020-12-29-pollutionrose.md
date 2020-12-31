@@ -7,7 +7,7 @@ categories: [R]
 
 The **openair** R package, by Carslaw and Ropkins, provides a simple way to create a pollution rose from air quality and weather data (1). We're going to look at what this function of the package can do, and the mechanics of how to best take advantage of it. 
 
-<img src = "https://oroconnor.github.io/td/images/pollutionrose/ExampleJuly4PollutionRoseDec10.pdf">
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/ExampleJuly4PollutionRoseDec10.pdf" alt = "Example pollution rose">
 
 ## openair
 
@@ -20,7 +20,8 @@ pollutionrose() is a function in the openair package that builds on the windrose
 ```r
 windrose(dataframename)
 ```
-[wind rose image]
+
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/windrose.png" alt = "Example wind rose">
 
 windrose() needs two properly identified columns in your data in order to function: 1) a windspeed column, labelled "ws" and 2) a wind direction column labelled "wd." If these columns are not labelled this way in your dataframe, you can specify which columns that windrose() should use in your arguments, by identifying your column names using "ws = " and "wd = ":
 
@@ -32,7 +33,7 @@ windrose() displays "Frequency of Counts by Wind Direction." In this case, the "
 
 The pollutionrose chart shows how different wind directions contribute to the counts of this particular pollutant, as broken down into ranges. 
 
-[pollution rose image]
+<img src = "https://oroconnor.github.io/td/images/pollutionrose/pollutionrose.png" alt = "Example pollution rose">
 
 ## pollutionrose() basics
 
@@ -101,7 +102,7 @@ windrose() can pass arguments on to lattice:xyplot, cutData and drawOpenKey func
 
 ***main*** 'main = "Example Title"' You can use "main =" to set a title for your pollution rose chart. 
 
-***sub*** 'sub = "Example Subtitle"' You can use "sub =" to set a subtitle for your pollution rose chart. 
+***sub*** 'sub = "Example Subtitle"' You can use "sub =" to set a subtitle for your pollution rose chart. There is a default subtitle based on the statistic chosen. That's what says "Frequency of counts by wind direction (%)" in our examples. So you'll be overriding that.  
 
 ## References and Resources 
 
