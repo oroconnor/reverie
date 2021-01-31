@@ -16,14 +16,35 @@ Let's start by looking at some non-graphical ways to take a peak at your data on
 
 ## Summary Statistics
 
+Let's just load all the packages we're going to need. Life is short. 
+```r
+library(  )
+
+```
+
 You've loaded your data into R and transformed it into a dataframe. Time to take a look and see what we've got here. 
 
 ```r
 #loading the data into a dataframe
-df <- as.dataframe(df)
+df <- as.data.frame(whateverTheDataSourceIs)
 
 #now we can take a look at the look at the data
 str(df)
 ```
 
 An alternative to base R's str() is the tidyverse's glimpse(), which is pretty similar. While there are distinctions, from both calls we get the number of rows in our datatframe, a list of the variables, the data type of each variable, and a sample of the first rows of the dataframe. 
+
+Now lets use the base R summary() to get some basic summary statistics for each variable. As you can see, it shows us minimum and maximum, quartiles, mean and median, broken out by variable. 
+
+```r
+summary(df)
+```
+Super helpful. 
+
+By calling the psych package's describe() function, we can see the summary statistics organized in (I think) a more readable table format that makes it easier to compare between the different variables. We also add in a few exta summary statistics: number of observations, standard deviation, a trimmed mean (trimmed - trims 10% off the top and bottom by default), maximum absolute deviation (mad), range, skew, kurtosis, and standard error. 
+
+```r
+describe(df)
+```
+
+Another, fairly similarly formatted option, sta.desc() from the pastecs package adds in yet another couple of summary statistics. I think that it's particularly useful to get the number of null and NA values in there. It 
