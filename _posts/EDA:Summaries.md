@@ -93,5 +93,17 @@ pairs.panels(df)
 Both pairs.panels() and chart.Correlation() show a smoothed line by default, but they can adjusted to show a fitted line, or to add confidence intervals to the lines if you wish. 
 
 
+The last bivariate plot function that I'd like to highlight is the corrplot() function from the (you guessed it) corrplot package. The first argument that you pass corrplot() needs to be the results of using the correlation function cor() on your dataframe. For example, the simplest usage might by 
+```r
+corrplot(cor(df))
+```
+That will give you the default version, which is using the "circles" method. I'd like to show you the ellipse version first though. 
+```r
+corrplot(cor(df), method = "ellipse")
+```
 
+As you can see, we've stripped out any visualizations of the actual data and focused on the correlation relationships. The more linear the shape of the ellipse (and the darker the color), the stronger the correlation. 
+This package offers a variety of options for your correlation plots, and various ways to tweak them. You can find the details here. https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html
+
+You can explore the "circle", "square", "number", "shade", "color", and "pie" method options.
 
