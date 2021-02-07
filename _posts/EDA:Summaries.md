@@ -47,4 +47,34 @@ By calling the psych package's describe() function, we can see the summary stati
 describe(df)
 ```
 
-Another, fairly similarly formatted option, sta.desc() from the pastecs package adds in yet another couple of summary statistics. I think that it's particularly useful to get the number of null and NA values in there. It 
+Another, fairly similarly formatted option, sta.desc() from the pastecs package adds in yet another couple of summary statistics. I think that it's particularly useful to get the number of null and NA values in there. 
+
+```r
+sta.desc(df)
+```
+
+
+## Univariate Plots
+
+We got a sense of the data types of our variables as inputted, and we were able to take a look at some basic summary statistics about each variable. So we have some information in hand that tells us some about the central tendencies of our variables, as well as their dispersion. But it would be helpful to get a visual look at each variable in order to get a sense of their distribution, as well as see where data is missing and maybe which variables have outliers that might even obstruct a good luck at the distribution of the rest of the data. Again, ultimately you will need to plot each variable of interest to be able to better control the scale and to drill down into investigating any issues that you uncover with that variable. For now, we're focusing on quick ways to take a first pass and get a big picture of your dataset. 
+
+One of my favorite functions to use for this purposed is the summaryPlot() function in the openair package. It provides a time series look at each variable, which helps to visualize both how the data is changing over time, and highlights missing data. There is a bar underneath the plot for each variable that shows where the NA datapoints are. On the right, you can see a simple histogram for each variable and have a sense of the distribution. For some variables, this will be fairly informative. For others, the bin size or scale won't be too helpful and you'll need to follow up with making individual histogram plots of the variable. As an alternative, you can set these plots to be density plots by including the argument 'type = "density plot"'. 
+
+```r
+summaryPlot(df)
+```
+It is important to note that summaryPlot() needs a column labelled "date" in order to work. I'm not sure what all the possible formats it will accept that column as, but I've had success using a datetime data type and labelling the column "date" before calling summaryPlot(). summaryPlot() only takes numeric or integer variable types. 
+
+Most of the bivariate plots we're going to look at also show density plots or histograms for the individual variables, so let's move on to discussing those.
+
+
+## Bivariate Plots
+
+Another nice things to be able to see when first exploring your dataset is how the variables relate to each other. 
+
+
+
+
+
+
+
