@@ -70,10 +70,27 @@ Most of the bivariate plots we're going to look at also show density plots or hi
 
 ## Bivariate Plots
 
-Another nice things to be able to see when first exploring your dataset is how the variables relate to each other. 
+Another nice things to be able to see when first exploring your dataset is how the variables relate to each other. Each of the next three functions provide a matrix of plots scatterplots of each pair of variables plotted against each other. 
 
+The first one I'll show is scatterplotMatrix() from the car package. On the diagnal, it provides density plots and variable names. The plots on either side of the diagnal are redundant bivariate scatterplots with fitted lines. 
 
+```r
+scatterplotMatrix(df)
+```
 
+Honestly, we can move past that one pretty quickly because I find this next one to be cleaner and more useful. chart.Correlation(df) from the package PerformanceAnalytics has similar bivariate plots, has histograms and density plots on the diagnal, and provides us with correlation coefficients. The stars with the correlation coefficients significance levels as calculated by the cor.test function. I mean, so much usefull information is packed into this function that is really easy to call. Wow!
+
+```r
+chart.Correlation(df)
+```
+
+The pairs.panels() function from the psych package is very similar to the above chart.Correlation. It has some different defaults (for example, it does not show the asteriks significance levels and does show correlation ellipses by default), but both functions can be adjusted using their arguments to turn these features on or off to your liking. 
+
+```r
+pairs.panels(df)
+```
+
+Both pairs.panels() and chart.Correlation() show a smoothed line by default, but they can adjusted to show a fitted line, or to add confidence intervals to the lines if you wish. 
 
 
 
