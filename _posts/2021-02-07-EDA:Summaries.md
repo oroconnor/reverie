@@ -1,10 +1,8 @@
 ---
 layout: post
-title:  EDA: Summaries and First Looks
-categories: [R][EDA]
+title:  EDA - Summaries and First Looks
+categories: [R]
 ---
-
-
 
 What do you do to as the first steps to explore your data? If you know very little about your new dataset, or are looking for where to start exploring, what are some places to begin your exploration? 
 
