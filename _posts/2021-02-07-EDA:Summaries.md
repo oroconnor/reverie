@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  EDA: Summaries and First Looks
+title:  EDA - Summaries and First Looks
 categories: [R]
 ---
 
