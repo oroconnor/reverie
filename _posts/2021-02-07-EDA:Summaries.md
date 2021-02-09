@@ -91,7 +91,7 @@ The first one I'll show is scatterplotMatrix() from the car package. On the diag
 ```r
 scatterplotMatrix(df)
 ```
-<img src = "https://oroconnor.github.io/td/images/summary/scatterplotMatrix.png" alt = "scatterplotMatrix() function">
+<img src = "https://oroconnor.github.io/td/images/summary/scatterplotmatrix.png" alt = "scatterplotMatrix() function">
 
 Honestly, we can move past that one pretty quickly because I find this next one to be cleaner and more useful. chart.Correlation(df) from the package PerformanceAnalytics has similar bivariate plots, has histograms and density plots on the diagnal, and provides us with correlation coefficients. The stars with the correlation coefficients significance levels as calculated by the cor.test function. I mean, so much usefull information is packed into this function that is really easy to call. Wow!
 
@@ -105,6 +105,7 @@ The pairs.panels() function from the psych package is very similar to the above 
 ```r
 pairs.panels(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/pairs.panels.png" alt = "pairs.panels() function">
 
 Both pairs.panels() and chart.Correlation() show a smoothed line by default, but they can adjusted to show a fitted line, or to add confidence intervals to the lines if you wish. 
 
@@ -117,6 +118,7 @@ That will give you the default version, which is using the "circles" method. I'd
 ```r
 corrplot(cor(df), method = "ellipse")
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/corrplot.png" alt = "corrplot() function">
 
 As you can see, we've stripped out any visualizations of the actual data and focused on the correlation relationships. The more linear the shape of the ellipse (and the darker the color), the stronger the correlation. 
 This package offers a variety of options for your correlation plots, and various ways to tweak them. You can find the details here. https://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html
