@@ -124,3 +124,5 @@ You can explore the "circle", "square", "number", "shade", "color", and "pie" me
 
 ## Your move next
 Now that you've caught a quick look at your data with these easy-to-call functions, it's time to continue your exploratory data analysis in a more thorough way, tailoring your exploration to the specific nature of your data. But hopefully these glimpses into your data helped you learn about what you're dealing with, and gave you some ideas for what to explore. 
+
+If you want to take a look at the code I used for this post, [it's saved here.] (https://github.com/oroconnor/td/blob/master/code/summary.R_)
