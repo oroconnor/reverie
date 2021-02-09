@@ -91,12 +91,14 @@ The first one I'll show is scatterplotMatrix() from the car package. On the diag
 ```r
 scatterplotMatrix(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/scatterplotMatrix.png" alt = "scatterplotMatrix() function">
 
 Honestly, we can move past that one pretty quickly because I find this next one to be cleaner and more useful. chart.Correlation(df) from the package PerformanceAnalytics has similar bivariate plots, has histograms and density plots on the diagnal, and provides us with correlation coefficients. The stars with the correlation coefficients significance levels as calculated by the cor.test function. I mean, so much usefull information is packed into this function that is really easy to call. Wow!
 
 ```r
 chart.Correlation(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/chart.Correlation.png" alt = "chart.Correlation() function">
 
 The pairs.panels() function from the psych package is very similar to the above chart.Correlation. It has some different defaults (for example, it does not show the asteriks significance levels and does show correlation ellipses by default), but both functions can be adjusted using their arguments to turn these features on or off to your liking. 
 
