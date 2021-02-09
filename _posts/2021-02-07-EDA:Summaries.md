@@ -17,9 +17,6 @@ Let's start by looking at some non-graphical ways to take a peak at your data on
 Let's just load all the packages we're going to need. Life is short. 
 ```r
 library(tidyverse)
-library(lubridate)
-library(ggplot2)
-library(feather)
 library(PerformanceAnalytics)
 library(car)
 library(psych)
@@ -125,3 +122,5 @@ This package offers a variety of options for your correlation plots, and various
 
 You can explore the "circle", "square", "number", "shade", "color", and "pie" method options.
 
+## Your move next
+Now that you've caught a quick look at your data with these easy-to-call functions, it's time to continue your exploratory data analysis in a more thorough way, tailoring your exploration to the specific nature of your data. But hopefully these glimpses into your data helped you learn about what you're dealing with, and gave you some ideas for what to explore. 
