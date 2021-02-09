@@ -8,7 +8,7 @@ What do you do to as the first steps to explore your data? If you know very litt
 
 We're going to look at a few packages and functions that can be called easily to give you that first glimpse into your data. At this point in the process, the goal is get a sense of the basic summary statistics, the rough distribution of your variables, and a first look at the relationships between different variables. After taking a peak at your data in this way, you will establish your own bespoke next steps for diving deeper into you data. You'll almost certainly want to plot variables on their own so that you can set up graphs of the variable to be more interpretable. Our focus in this article will be on quick snapshots that gives us a first look at all the variables. 
 
-While this information is broadly applicable, there are few important considerations to keep in mind. For the most part, most of these functions are designed to work with numeric data. A few of the functions will operate with other data types in the dataframe, such as character, but many just won't do anything unless all the columns in the dataframe are all numeric. Converting the character variable to a factor (if it is, in fact, some sort of categorical variable) will allow a few of the functions to excecute, but won't yield any valuable information. For the functions below, it's best to select just your numeric data to work with, and exclude datetime or character variables. The important exception is summarPlot(), which actually requires the datetime variable because it is meant for accessing time-series data and creates its plots using time as the x axis. 
+While this information is broadly applicable, there are few important considerations to keep in mind. For the most part, most of these functions are designed to work with numeric data. A few of the functions will operate with other data types in the dataframe, such as character, but many just won't do anything unless the columns in the dataframe are all numeric. Converting the character variable to a factor (if it is, in fact, some sort of categorical variable) will allow a few of the functions to excecute, but won't yield any valuable information. For the functions below, it's best to select just your numeric data to work with, and exclude datetime or character variables. The important exception is summarPlot(), which actually requires the datetime variable because it is meant for accessing time-series data and creates its plots using time as the x axis. 
 
 Let's start by looking at some non-graphical ways to take a peak at your data one variable at a time, then look at graphical representations of your single variables. Finally, we will look representations of pair-wise relationships between your variables. 
 
@@ -16,19 +16,32 @@ Let's start by looking at some non-graphical ways to take a peak at your data on
 
 Let's just load all the packages we're going to need. Life is short. 
 ```r
-library(  )
-
+library(tidyverse)
+library(lubridate)
+library(ggplot2)
+library(feather)
+library(PerformanceAnalytics)
+library(car)
+library(psych)
+library(pastecs)
+library(openair)
+library(corrplot)
 ```
 
 You've loaded your data into R and transformed it into a dataframe. Time to take a look and see what we've got here. 
 
 ```r
 #loading the data into a dataframe
+#in my case, I'm loading a dataframe with a few days of air quality monitoring data
+#again, select a subset of your data that contains only the numeric columns
 df <- as.data.frame(whateverTheDataSourceIs)
+
 
 #now we can take a look at the look at the data
 str(df)
 ```
+
+<img src = "https://oroconnor.github.io/td/images/summary/str.png" alt = "str() function">
 
 An alternative to base R's str() is the tidyverse's glimpse(), which is pretty similar. While there are distinctions, from both calls we get the number of rows in our datatframe, a list of the variables, the data type of each variable, and a sample of the first rows of the dataframe. 
 
@@ -37,6 +50,8 @@ Now lets use the base R summary() to get some basic summary statistics for each 
 ```r
 summary(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/summary.png" alt = "summary() function">
+
 Super helpful. 
 
 By calling the psych package's describe() function, we can see the summary statistics organized in (I think) a more readable table format that makes it easier to compare between the different variables. We also add in a few exta summary statistics: number of observations, standard deviation, a trimmed mean (trimmed - trims 10% off the top and bottom by default), maximum absolute deviation (mad), range, skew, kurtosis, and standard error. 
@@ -44,13 +59,14 @@ By calling the psych package's describe() function, we can see the summary stati
 ```r
 describe(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/describe.png" alt = "describe() function">
 
 Another, fairly similarly formatted option, sta.desc() from the pastecs package adds in yet another couple of summary statistics. I think that it's particularly useful to get the number of null and NA values in there. 
 
 ```r
-sta.desc(df)
+stat.desc(df)
 ```
-
+<img src = "https://oroconnor.github.io/td/images/summary/stat.desc.png" alt = "stat.desc() function">
 
 ## Univariate Plots
 
