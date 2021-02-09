@@ -29,7 +29,7 @@ You've loaded your data into R and transformed it into a dataframe. Time to take
 
 ```r
 #loading the data into a dataframe
-#in my case, I'm loading a dataframe with a few days of air quality monitoring data
+#in my case, I'm loading a dataframe with air quality monitoring data
 #again, select a subset of your data that contains only the numeric columns
 df <- as.data.frame(whateverTheDataSourceIs)
 
@@ -74,6 +74,8 @@ One of my favorite functions to use for this purposed is the summaryPlot() funct
 ```r
 summaryPlot(df)
 ```
+<img src = "https://oroconnor.github.io/td/images/summary/summaryPlot.png" alt = "summaryPlot() function">
+
 It is important to note that summaryPlot() needs a column labelled "date" in order to work. I'm not sure what all the possible formats it will accept that column as, but I've had success using a datetime data type and labelling the column "date" before calling summaryPlot(). summaryPlot() only takes numeric or integer variable types. 
 
 Most of the bivariate plots we're going to look at also show density plots or histograms for the individual variables, so let's move on to discussing those.
