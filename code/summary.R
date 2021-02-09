@@ -15,15 +15,24 @@ library(corrplot)
 #importing my dataframe and selecting for the numeric columns
 #you can ignore this and import your own data and assign it to 
 #df as a dataframe
-df <- read_feather("airmasterk.feather") %>%
+
+df_wDate <- read_feather("airmasterk.feather") %>%
   filter(
-    month(Time) == 1,
-    day(Time) < 5
+    year(Time) == 2020
+  ) %>%
+  mutate(
+    date = Time
   ) %>%
   select(
- #   c0.3,c0.5,c0.7,c1.0,Temp,RH,pm2.5
-    c0.3,c0.5,c0.7,c1.0,Temp,RH,pm2.5  
+    #   c0.3,c0.5,c0.7,c1.0,Temp,RH,pm2.5
+    date,c0.3,c0.5,c0.7,c1.0,Temp,RH,pm2.5  
+  ) 
+
+df <- df_wDate
+  select(
+    -date
   )
+
 
 #quick look at dataframe
 str(df)
@@ -46,7 +55,7 @@ stat.desc(df)
 
 ### Univariate plots:
 
-summaryPlot(df)
+summaryPlot(df_wDate)
 
 ### Bivariate plots:
 
